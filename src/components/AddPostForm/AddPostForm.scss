@@ -1,0 +1,42 @@
+.post_add_form {
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  border-bottom: 2px solid rgb(0, 0, 0);
+  button {
+    margin-left: 5px;
+    width: 2.6em;
+    height: 2.6em;
+    background-color: rgb(61, 164, 112);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+  }
+  button:hover {
+    transform: scale(1.1);
+  }
+  label {
+    margin-left: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    input {
+      padding: 5px;
+      width: 100%;
+      font-size: 18px;
+      border-radius: 10px;
+    }
+    span {
+      font-weight: bold;
+      color: rgb(187, 66, 71);
+    }
+  }
+  label:nth-child(1) {
+    width: 30%;
+  }
+  label:nth-child(2) {
+    flex-grow: 1;
+    width: 60%;
+  }
+}

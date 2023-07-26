@@ -1,0 +1,38 @@
+/** @format */
+
+.user_page {
+  padding: 10px;
+  width: 100%;
+  font-size: 20px;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  background-color: rgba(78, 104, 125, 0.3);
+  .user {
+    padding-bottom: 5px;
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    border-bottom: 2px solid rgb(0, 0, 0);
+    h2 {
+      flex-grow: 1;
+      margin-left: 10px;
+    }
+    a {
+      padding: 5px;
+      color: initial;
+      cursor: pointer;
+      border-radius: 10px;
+      border: 2px solid rgb(0, 0, 0);
+      text-decoration: none;
+      background-color: rgba(207, 32, 51, 0.3);
+      transition: all 0.5s ease-in-out;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
