@@ -1,9 +1,13 @@
 import React from 'react';
 import './UserPage.scss';
-import { NavLink, Outlet, useParams } from 'react-router-dom';
+import { NavLink, useParams } from 'react-router-dom';
 import { useGetUserQuery } from '../../store/AppAPI/userAPI';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import  Navigation  from '../Navigation';
+import { UserDetails } from '../UserDetails/UserDetails';
+import PostList from '../PostList';
+import TodoList from '../TodoList';
+import AlbumsList from '../AlbumsList';
+import TabMenu from '../TabMenu';
 
 export const UserPage = () => {
   const { id } = useParams();
@@ -32,8 +36,12 @@ export const UserPage = () => {
           <FontAwesomeIcon icon="fa-solid fa-right-from-bracket" />
         </NavLink>
       </div>
-      <Navigation />
-      <Outlet/>
+      <UserDetails user={user} />
+      <TabMenu>
+        <AlbumsList label="Albums" userId={user.id} />
+        <TodoList label="Todos" userId={user.id}/>
+        <PostList label="Posts" userId={user.id}/>
+      </TabMenu>
     </div>
   );
 };

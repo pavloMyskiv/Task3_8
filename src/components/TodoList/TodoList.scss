@@ -5,18 +5,15 @@
   flex: 1 1 auto;
   border-radius: 10px;
   background-color: rgb(189, 170, 196);
-  h1 {
-    padding: 12px;
-    width: 100%;
-    text-align: center;
-    border-bottom: 2px solid rgb(0, 0, 0);
-  }
   .todo {
     padding: 10px;
     border-bottom: 1px solid rgb(0, 0, 0);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    h2 {
+      font-size: 20px;
+    }
   }
   input {
     padding: 5px;
@@ -25,9 +22,6 @@
     height: 2.5em;
     border-radius: 10px;
     background-color: rgb(217, 167, 198);
-  }
-  .todo_body h2 {
-    font-size: 24px;
   }
   .todo_button {
     max-width: 25%;

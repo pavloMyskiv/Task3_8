@@ -1,5 +1,4 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import './TodoList.scss';
 import {
@@ -10,10 +9,9 @@ import {
 import { setEditingTodoId } from '../../store/slices/todoListSlice';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-export const TodoList = () => {
+export const TodoList = ({ userId }) => {
   const [updateTodoMutation] = useUpdateTodoMutation();
   const [deleteTodoMutation] = useDeleteTodoMutation();
-  const { id } = useParams();
   const dispatch = useDispatch();
   const editingTodoId = useSelector((state) => state.todoList.editingTodoId);
   const {
@@ -21,7 +19,7 @@ export const TodoList = () => {
     isLoading,
     error,
     isError,
-  } = useGetTodosQuery(id);
+  } = useGetTodosQuery(userId);
 
   const handleComplete = async (todo) => {
     const updatedTodo = { ...todo, completed: !todo.completed };
@@ -44,7 +42,6 @@ export const TodoList = () => {
   if (isLoading) {
     return (
       <div className="todo_list">
-        <h1>Todos</h1>
         <div className="loader"></div>
       </div>
     );
@@ -52,7 +49,6 @@ export const TodoList = () => {
   if (isError) {
     return (
       <div className="todo_list">
-        <h1>Todos</h1>
         <div className="error">
           <h3>ERROR:{error.status}</h3>
           <p>{JSON.stringify(error.data)}</p>
@@ -62,7 +58,6 @@ export const TodoList = () => {
   }
   return (
     <div className="todo_list">
-      <h1>Todos</h1>
       {todosList.map((todo) => (
         <div
           className={todo.completed ? 'todo completed' : 'todo'}

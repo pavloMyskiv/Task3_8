@@ -1,0 +1,37 @@
+.tab_menu {
+  width: 100%;
+  .tab_buttons {
+    display: flex;
+    justify-content: space-around;
+    font-size: 24px;
+    font-weight: bold;
+    .tab_button {
+      display: block;
+      width: 100%;
+      margin: 10px 5px 0 5px;
+      padding: 5px;
+      text-align: center;
+      font-size: 20px;
+      color: initial;
+      border: 1px solid rgb(0, 0, 0);
+      border-radius: 0 10px 0 0;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .active {
+      border: 2px solid rgb(0, 0, 0);
+      border-bottom: none;
+      background-color: #ccc;
+      box-shadow: -1px -1px 5px rgb(0, 0, 0);
+      &:nth-child(1) {
+        background-color: rgb(117, 204, 169);
+      }
+      &:nth-child(2) {
+        background-color: rgb(189, 170, 196);
+      }
+      &:nth-child(3) {
+        background-color: rgba(60, 79, 53, 0.5);
+      }
+    }
+  }
+}
