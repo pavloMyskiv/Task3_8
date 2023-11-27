@@ -1,0 +1,39 @@
+.user_list {
+  margin-bottom: 5px;
+  padding: 10px;
+  width: 100%;
+  flex: 1 1 auto;
+  background-color: rgba(78, 104, 125, 0.3);
+  h1 {
+    padding: 12px;
+    width: 100%;
+    text-align: center;
+    border-bottom: 2px solid rgb(0, 0, 0);
+  }
+  .user {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgb(0, 0, 0);
+  }
+  button {
+    padding: 5px;
+    height: 2rem;
+    border-radius: 10px;
+    background-color: rgb(61, 164, 112);
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  .user_info {
+    h2 {
+      font-size: 24px;
+    }
+    span {
+      color: #000;
+    }
+  }
+}

@@ -1,0 +1,49 @@
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.App {
+  max-width: 100vw;
+  min-height: 100vh;
+  background-color: #ccc;
+}
+.error {
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+  color: rgb(187, 66, 71);
+}
+
+.loader {
+  margin: 0 auto;
+  width: 50px;
+  height: 50px;
+  display: grid;
+  border: 4px solid #0000;
+  border-radius: 50%;
+  border-color: #e4e4ed #0000;
+  animation: s6 1s infinite linear;
+}
+.loader::before,
+.loader::after {
+  content: '';
+  grid-area: 1/1;
+  margin: 2px;
+  border: inherit;
+  border-radius: 50%;
+}
+.loader::before {
+  border-color: #766df4 #0000;
+  animation: inherit;
+  animation-duration: 0.5s;
+  animation-direction: reverse;
+}
+.loader::after {
+  margin: 8px;
+}
